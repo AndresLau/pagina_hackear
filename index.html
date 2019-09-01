@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body style="">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container"> <a class="navbar-brand" href="#">
+        <i class="fa fa-car" aria-hidden="true"></i>
+        <b>CARPOOLUNI</b>
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar10">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="inicio.php">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="../controlador/Rutsregis.php">Rutas Registradas</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="Perfil.php">Perfil</a> </li>
+          
+      </div>
+    </div>
+  </nav>
+  <div class="py-1" style="	background-image: url(https://scontent.fbog2-2.fna.fbcdn.net/v/t1.0-9/61005471_2416497538373269_8311857973802565632_o.jpg?_nc_cat=108&amp;_nc_ht=scontent.fbog2-2.fna&amp;oh=073a09fc82de3dcafc5b29e7fb6dc87c&amp;oe=5D5C698B);	background-position: left center;	background-size: cover;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row my-5">
+        <div class="p-5 col-lg-6">
+          <h1>BUSCAR RUTA</h1>
+          <p class="mb-3">Para poder ofrecer un servicio debera registrar rutas para poder permitir a los usuarios realizar una visualizacion de estas.
+            Esta pagina fue desarrollada por Carlos Andres Laureano Parra
+            </p>
+          <form action="../controlador/procesa.php" method="post" id="guarda">
+            <input type="text" value="guardar" name="opc" hidden>
+            <div class="form-group">
+              <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Direccion Inicial">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control my-2" name="puntoU" id="puntoU" placeholder="Punto 1">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="puntoD" name="puntoD" placeholder="Punto 2">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mt-2" id="puntoT" name="puntoT" placeholder="Punto 3">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Punto 4" id="puntoC" name="puntoC">
+            </div>
+            <button type="submit" class="btn btn-dark" onclick="alerta()">Registrar Ruta</button>
+          </form>
+        </div>
+        <div class="col-md-6"><img class="img-fluid d-block mx-auto" src="images/undraw_Destination_mcr1.svg"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js">
+  </script>
+  <script>
+    function alerta() {
+      M.toast({
+        html: 'LA RUTA INGRESADA HA SIDO REGISTRADA DE MANERA CORRECTA',
+        displayLength: 2000,
+        classes: "green",
+        completeCallback: function() {
+          alert('Your toast was dismissed')
+        }
+      })
+    }
+  </script>
+
+</body>
+
+</html>
